@@ -19,7 +19,7 @@ body {
 }
 
 .faq-container {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,8 @@ body {
     background-color: white;
     margin: 0 1rem;
     padding: 25px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .header {
@@ -47,11 +48,6 @@ body {
 
 .header h1 {
     font-size: 1.8rem;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
 }
 
 .q {
@@ -81,4 +77,32 @@ body {
     font-weight: 400;
     font-size: 0.95rem;
     line-height: 1.5rem;
+}
+
+@media (min-width: 375px) {
+    body {
+        background-image: url("./faq-accordion-main/assets/images/background-pattern-desktop.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .star {
+        height: 40px;
+        width: 40px;
+    }
+
+    .q h2 {
+        flex-basis: 90%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .faq-container {
+        padding: 40px 40px;
+    }
 }
