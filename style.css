@@ -58,6 +58,11 @@ body {
 
 .q h2 {
     flex-basis: 70%;
+    cursor: pointer;
+}
+
+.q h2:hover {
+    color: hsl(293, 69%, 62%);
 }
 
 .answer {
