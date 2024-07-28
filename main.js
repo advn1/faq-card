@@ -7,8 +7,7 @@ window.onload = () => {
 
     function toggleBtn(element, isText = true) {
         if (isText) {
-            let allBtnExpands = Array.from(document.getElementsByTagName("img"))
-            btnExpand = allBtnExpands.find(btn => btn.alt === element.ariaLabel)
+            btnExpand = element.parentNode.querySelector("img")
         } else {
             btnExpand = element
         }
@@ -16,7 +15,7 @@ window.onload = () => {
         const imageExpand = btnExpand.classList.toggle('plus')
 
         imageExpand ? btnExpand.src = baseUrl + "icon-plus.svg" : btnExpand.src = baseUrl + "icon-minus.svg"
-        const answer_text = document.querySelector("." + btnExpand.alt)
+        const answer_text = document.querySelector("." + btnExpand.ariaLabel)
         answer_text.classList.toggle('show')
     }
 
